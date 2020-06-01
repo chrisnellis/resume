@@ -24,12 +24,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: .github/scripts/build.sh
-    - name: Commit files
-        run: |
-              git config --local user.email "action@github.com"
-              git config --local user.name "GitHub Action"
-              git commit -m "[ci-skip] Persist output" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -am "[ci-skip] Push changes"
+        git push
