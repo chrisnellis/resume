@@ -1,0 +1,618 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+        <title>Your Name</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+        <style type="text/css">
+            @import url(
+            	https://fonts.googleapis.com/css?family=Lato:400,700
+            );
+            body {
+            	background: #fff;
+            	font-family: Lato, sans-serif;
+            	margin: 0 0 80px;
+            }
+            a {
+            	color: #2ecc71;
+            }
+            a:focus,
+            a:hover {
+            	color: #f1c40f;
+            	text-decoration: none;
+            }
+            p {
+            	line-height: 1.5;
+            	margin: 0;
+            }
+            p + p {
+            	margin-top: 10px;
+            }
+            h1,
+            h2,
+            h3,
+            h4 {
+            	margin-top: 0
+            }
+            section {
+            	margin-top: 30px;
+            }
+            li {
+            	line-height: 1.8;
+            	list-style: none;
+            }
+            li:before {
+            	content: "\f052";
+            	float: left;
+            	font: 13px Octicons;
+            	margin-top: 6px;
+            	margin-left: -20px;
+            	opacity: .1;
+            	position: absolute;
+            }
+            blockquote {
+            	border-left: 5px solid #e7e9ec;
+            	font-size: 14px;
+            }
+            em {
+            	color: #95a5a6;
+            	font-weight: normal;
+            	font-style: normal;
+            }
+            h4 span:first-child {
+            	color: #000;
+            	font-weight: bold;
+            }
+            .container {
+            	max-width: 750px;
+            	padding: 0 30px;
+            }
+            .col-sm-6 {
+            	margin-bottom: 10px;
+            }
+            .col-sm-12 h4 {
+            	margin-top: 12px; 
+            }
+            .col-sm-12 + .col-sm-12 {
+            	margin-top: 30px;
+            }
+            #header {
+            	background: #f4f6f6;
+            	padding: 50px 0;
+            	margin-bottom: 30px;
+            }
+            #header h2 {
+            	color: #95a5a6;
+            	font-size: 24px;
+            }
+            #content h3 {
+            	color: #f1c40f;
+            	font-size: 26px;
+            	margin-top: -4px;
+            }
+            #content aside {
+            	text-align: right;
+            	padding-right: 30px;
+            }
+            #profiles .network {
+            	text-transform: capitalize;
+            }
+            #work .position,
+            #volunteer .position {
+            	font-weight: bold;
+            	margin-bottom: 8px;
+            }
+            #education .area {
+            	font-weight: bold;
+            }
+            #education .area:before {
+            	content: "\f0d7";
+            	font: 16px Octicons;
+            	margin-right: 6px;
+            }
+            #education .studyType {
+            	margin-left: 25px;
+            }
+            #awards .summary,
+            #publications .summary {
+            	margin-top: 8px;
+            }
+            #publications .website a:before {
+            	content: attr(href);
+            }
+            
+            @media (min-width: 480px) {
+            	.strike-through {
+            		border-top: 1px solid #f4f6f6;
+            		height: 20px;
+            		margin-top: 12px;
+            		margin-bottom: -2px;
+            		position: relative;
+            	}
+            	.strike-through span,
+            	.strike-through a {
+            		background: #fff;
+            		position: absolute;
+            	}
+            	.strike-through span:first-child {
+            		padding-right: 20px;
+            		margin-top: -12px;
+            	}
+            	.strike-through span + span {
+            		font-size: 14px;
+            		margin-top: -10px;
+            		padding-left: 20px;
+            		right: 0;
+            	}
+            }
+            @media (max-width: 768px) {
+            	.col-sm-6:last-child {
+            		margin-bottom: 0px;
+            	}
+            	#content aside {
+            		margin-bottom: 20px;
+            		padding-right: 0;
+            		text-align: left;
+            	}
+            	#publications .website a:before {
+            		content: "View publication";
+            	}
+            }
+            @media (max-width: 480px) {
+            	h1 {
+            		font-size: 26px;
+            	}
+            	.date {
+            		font-size: 14px;
+            		margin-bottom: 5px;
+            	}
+            	.strike-through span:first-child {
+            		margin-bottom: 7px;
+            	}
+            	.strike-through span {
+            		display: block;
+            	}	
+            	#header {
+            		margin-bottom: 10px;
+            		padding: 40px 0;
+            	}
+            	#actions {
+            		display: none;
+            	}
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9 col-sm-push-3">
+                        	<h1>
+						Your Name
+					</h1>
+
+                        	<h2>
+						Your Profession
+					</h2>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="content" class="container">
+            <section id="contact" class="row">
+                <aside class="col-sm-3">
+                    	<h3>Contact</h3>
+
+                </aside>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-6">	<strong>Email</strong>
+
+                            <div class="email">your-email@your-website.com</div>
+                        </div>
+                        <div class="col-sm-6">	<strong>Phone</strong>
+
+                            <div class="phone">1-999-999-9999</div>
+                        </div>
+                        <div class="col-sm-6">	<strong>Website</strong>
+
+                            <div class="website">	<a href="http://your-website.com">http://your-website.com</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about" class="row">
+                <aside class="col-sm-3">
+                    	<h3>About</h3>
+
+                </aside>
+                <div class="col-sm-9">
+                    <p>A brief description of yourself as a candidate that appears in some résumé
+                        themes. You may use <strong>Markdown</strong> and/or &lt;strong&gt;HTML&lt;/strong&gt;
+                        formatting here including <a href="https://en.wikipedia.org/wiki/Special:Random">links</a> or
+                        stick to plain text.</p>
+                </div>
+            </section>
+            <section id="profiles" class="row">
+                <aside class="col-sm-3">
+                    	<h3>Profiles</h3>
+
+                </aside>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-6">	<strong class="network">
+						GitHub
+					</strong>
+
+                            <div class="username">
+                                <div class="url">	<a href="https://github.com/your-github-username">your-github-username</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="work" class="row">
+                <aside class="col-sm-3">
+                    	<h3>Work</h3>
+
+                </aside>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            	<h4 class="strike-through">
+					<span>Most Recent Employer</span>
+					<span class="date">
+						2013-10 — 
+					</span>
+				</h4>
+
+                            <div class="website pull-right">	<a href="http://employer-website.com">http://employer-website.com</a>
+
+                            </div>
+                            <div class="position">Head Honcho</div>
+                            <div class="summary">
+                                <p>A summary of your role in this position. Can include <strong>Markdown</strong> and
+                                    inline &lt;strong&gt;HTML&lt;/strong&gt; formatting.</p>
+                            </div>
+                            	<h4>Highlights</h4>
+
+                            <ul class="highlights">
+                                <li class="bullet">Increased profits on left-handed spin widgets by 35%.</li>
+                                <li class="bullet">Participated in iterative/incremental devolution.</li>
+                                <li class="bullet">Promoted to Head Ninja after 500 successful cage matches.</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12">
+                            	<h4 class="strike-through">
+					<span>Previous Employer</span>
+					<span class="date">
+						2009-07 — 2013-10
+					</span>
+				</h4>
+
+                            <div class="website pull-right">	<a href="http://employer-website.com">http://employer-website.com</a>
+
+                            </div>
+                            <div class="position">Worker Bee</div>
+                            <div class="summary">
+                                <p>A summary of your previous role. Can include <strong>Markdown</strong> and
+                                    inline &lt;strong&gt;HTML&lt;/strong&gt; formatting.</p>
+                            </div>
+                            	<h4>Highlights</h4>
+
+                            <ul class="highlights">
+                                <li class="bullet">Highlight #1.</li>
+                                <li class="bullet">Highlight #2.</li>
+                                <li class="bullet">Highlight #3.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="volunteer" class="row">
+                <aside class="col-sm-3">
+                    	<h3>Volunteer</h3>
+
+                </aside>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            	<h4 class="strike-through">
+					<span>The Mommies Network</span>
+					<span class="date">
+						2006-06 — 
+					</span>
+				</h4>
+
+                            <div class="website pull-right">	<a href="http://themommiesnetwork.org">http://themommiesnetwork.org</a>
+
+                            </div>
+                            <div class="position">Volunteer Coordinator</div>
+                            <div class="summary">
+                                <p>A summary of your volunteer experience at this organization. Can include <strong>Markdown</strong> and
+                                    inline &lt;strong&gt;HTML&lt;/strong&gt; formatting.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            	<h4 class="strike-through">
+					<span>Air Force</span>
+					<span class="date">
+						2004 — 
+					</span>
+				</h4>
+
+                            <div class="website pull-right">	<a href="https://service-website.mil">https://service-website.mil</a>
+
+                            </div>
+                            <div class="position">MOS</div>
+                            <div class="summary">
+                                <p>A summary of your service experience with this organization. Can include <strong>Markdown</strong> and
+                                    inline &lt;strong&gt;HTML&lt;/strong&gt; formatting.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="education" class="row">
+                <aside class="col-sm-3">
+                    	<h3>Education</h3>
+
+                </aside>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            	<h4 class="strike-through">
+					<span>Acme University</span>
+					<span class="date">
+						2004-09 — 2009-06
+					</span>
+				</h4>
+
+                            	<h4>Courses</h4>
+
+                            <ul class="courses">
+                                <li>Data Algorithms</li>
+                                <li>Optimization</li>
+                                <li>Neural Networks</li>
+                                <li>C</li>
+                                <li>C++</li>
+                                <li>Java</li>
+                                <li>HTTP</li>
+                                <li>TCP/IP</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="awards" class="row">
+                <aside class="col-sm-3">
+                    	<h3>Awards</h3>
+
+                </aside>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            	<h4 class="strike-through">
+					<span>Awesomeness Award</span>
+				</h4>
+
+                            <div class="date pull-right">	<em>Awarded</em>
+2016</div>
+                            <div class="awarder">	<em>by</em>
+	<strong>HackMyResume</strong>
+
+                            </div>
+                            <div class="summary">Thanks for being a HackMyResume / FluentCV user!</div>
+                        </div>
+                        <div class="col-sm-12">
+                            	<h4 class="strike-through">
+					<span>MVP: SpinWidget Technology</span>
+				</h4>
+
+                            <div class="date pull-right">	<em>Awarded</em>
+2015-08-03</div>
+                            <div class="awarder">	<em>by</em>
+	<strong>Big Software</strong>
+
+                            </div>
+                            <div class="summary">For work in promotion and popularization of SpinWidget technology.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="publications" class="row">
+                <aside class="col-sm-3">
+                    	<h3>Publications</h3>
+
+                </aside>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            	<h4 class="strike-through">
+					<span>My Blog</span>
+					<span class="date">
+						2010
+					</span>
+				</h4>
+
+                            <div class="website pull-right">	<a href="http://coding-snorer.com"></a>
+
+                            </div>
+                            <div class="publisher">	<em>Published by</em>
+	<strong>Medium.com</strong>
+
+                            </div>
+                            <div class="summary">
+                                <p>Your blog or online home.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            	<h4 class="strike-through">
+					<span>Something I Wrote Once</span>
+					<span class="date">
+						2009
+					</span>
+				</h4>
+
+                            <div class="website pull-right">	<a href="http://codeproject.com/something-i-wrote-once"></a>
+
+                            </div>
+                            <div class="publisher">	<em>Published by</em>
+	<strong>Acme University Press</strong>
+
+                            </div>
+                            <div class="summary">
+                                <p>List your blogs, articles, essays, novels, and dissertations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="skills" class="row">
+                <aside class="col-sm-3">
+                    	<h3>Skills</h3>
+
+                </aside>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="name">
+                                	<h4>Web Development</h4>
+
+                            </div>
+                            <ul class="keywords">
+                                <li>LAMP</li>
+                                <li>JavaScript</li>
+                                <li>HTML 5</li>
+                                <li>Angular.js</li>
+                                <li>jQuery</li>
+                                <li>Sass</li>
+                                <li>LESS</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="name">
+                                	<h4>Ninjitsu</h4>
+
+                            </div>
+                            <ul class="keywords">
+                                <li>Tokagure Ryu</li>
+                                <li>Shuriken</li>
+                                <li>Yogen</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="name">
+                                	<h4>Skillset #3</h4>
+
+                            </div>
+                            <ul class="keywords">
+                                <li>Your</li>
+                                <li>keywords</li>
+                                <li>here</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="languages" class="row">
+                <aside class="col-sm-3">
+                    	<h3>Languages</h3>
+
+                </aside>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="language">	<strong>English</strong>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="language">	<strong>Spanish</strong>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="language">	<strong>C++</strong>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="interests" class="row">
+                <aside class="col-sm-3">
+                    	<h3>Interests</h3>
+
+                </aside>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="name">
+                                	<h4>GitHub</h4>
+
+                            </div>
+                            <ul class="keywords">
+                                <li>GitHub</li>
+                                <li>git</li>
+                                <li>GitHub Desktop (OS X)</li>
+                                <li>LFS</li>
+                                <li>GitHub API</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="name">
+                                	<h4>chess</h4>
+
+                            </div>
+                            <ul class="keywords">
+                                <li>Sicilian</li>
+                                <li>King&#x27;s Gambit</li>
+                                <li>Ruy Lopez</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="references" class="row">
+                <aside class="col-sm-3">
+                    	<h3>References</h3>
+
+                </aside>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <blockquote class="reference">
+                                <p>Such-and-such is awesome! I&#x27;d hire him/her again in a second!</p>
+                                <p
+                                class="name">	<strong>— John Doe</strong>
+
+                                    </p>
+                            </blockquote>
+                        </div>
+                        <div class="col-sm-12">
+                            <blockquote class="reference">
+                                <p>Hands-down <em>the best developer/manager/spelunker/coworker/etc</em> I&#x27;ve
+                                    ever worked with. Emphasis <em>mine!</em>
+                                </p>
+                                <p class="name">	<strong>— Somebody Important</strong>
+
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+
+</html>
