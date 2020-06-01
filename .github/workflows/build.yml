@@ -16,7 +16,7 @@ jobs:
         node-version: [14.x]
 
     steps:
-    - name: Setup
+    - name: Checkout Repo
       uses: actions/checkout@v2
 
     - name: Initialize NodeJS
