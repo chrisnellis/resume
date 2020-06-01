@@ -173,3 +173,9 @@ h4 span:first-child {
 		display: none;
 	}
 }
+
+@media (prefers-color-scheme: dark) {
+	#content h3 {
+		color: #f10f0f;
+	}
+}
