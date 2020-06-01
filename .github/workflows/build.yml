@@ -2,15 +2,13 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: Build Resume File
-
 on:
   push:
     branches: [ master ]
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
+#    Check to make sure the commit doesn't contain "ci-skip"
     if: "!contains(github.event.head_commit.message, 'ci-skip')"
 
     strategy:
@@ -18,13 +16,18 @@ jobs:
         node-version: [14.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Setup
+      uses: actions/checkout@v2
+
+    - name: Initialize NodeJS
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: .github/scripts/build.sh
-    - name: Commit changes
+
+    - name: Build index.html
+      run: .github/scripts/build.sh
+
+    - name: Commit & Push Changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
