@@ -1,3 +1,4 @@
+set -x
 npm install -g hackmyresume
 cd src/
 npm ci

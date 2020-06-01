@@ -79,44 +79,6 @@
 			</div>
 		</div>
 	</section>
-
-	{{#if profiles.length}}
-	<section id="profiles" class="row">
-		<aside class="col-sm-3">
-			<h3>Profiles</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-				{{#profiles}}
-				<div class="col-sm-6">
-					{{#network}}
-					<strong class="network">
-						{{.}}
-					</strong>
-					{{/network}}
-					{{#if username}}
-					<div class="username">
-						{{#if url}}
-						<div class="url">
-							<a href="{{url}}">{{username}}</a>
-						</div>
-						{{else}}
-							{{username}}
-						{{/if}}
-					</div>
-					{{else}}
-						{{#if url}}
-						<div class="url">
-							<a href="{{url}}">{{url}}</a>
-						</div>
-						{{/if}}
-					{{/if}}
-				</div>
-				{{/profiles}}
-			</div>
-		</div>
-	</section>
-	{{/if}}
 	{{/resume.basics}}
 
 	{{#if resume.work.length}}
@@ -431,6 +393,43 @@
 	</section>
 	{{/if}}
 
+	{{#if profiles.length}}
+	<section id="profiles" class="row">
+		<aside class="col-sm-3">
+			<h3>Profiles</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+				{{#profiles}}
+				<div class="col-sm-6">
+					{{#network}}
+					<strong class="network">
+						{{.}}
+					</strong>
+					{{/network}}
+					{{#if username}}
+					<div class="username">
+						{{#if url}}
+						<div class="url">
+							<a href="{{url}}">{{username}}</a>
+						</div>
+						{{else}}
+						{{username}}
+						{{/if}}
+					</div>
+					{{else}}
+					{{#if url}}
+					<div class="url">
+						<a href="{{url}}">{{url}}</a>
+					</div>
+					{{/if}}
+					{{/if}}
+				</div>
+				{{/profiles}}
+			</div>
+		</div>
+	</section>
+	{{/if}}
 	</div>
 
 	</body>
