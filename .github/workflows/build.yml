@@ -8,10 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     #    Check to make sure the commit doesn't contain "ci-skip"
     if: "!contains(github.event.head_commit.message, 'ci-skip')"
-
-      node-version: [14.x]
 
     steps:
       - name: Checkout Repo
@@ -20,7 +19,7 @@ jobs:
       - name: Initialize NodeJS
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ node-version }}
+          node-version: 14.x
 
       - name: Build index.html
         run: .github/scripts/build.sh
