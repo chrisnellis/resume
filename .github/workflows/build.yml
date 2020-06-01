@@ -29,8 +29,12 @@ jobs:
 
     - name: Commit & Push Changes
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add index.html
-        git commit -am "[ci-skip] Push changes"
-        git push
+        if git diff-index --quiet HEAD --; then
+            # No changes
+        else
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add index.html
+            git commit -am "[ci-skip] Push changes"
+            git push
+        fi
