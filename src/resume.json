@@ -1,37 +1,32 @@
 {
-  "name": "Your Name",
+  "name": "Christopher Nellis",
   "meta": {
     "format": "FRESH@0.6.0",
     "version": "0.1.0"
   },
   "info": {
-    "label": "Your Profession",
+    "label": "Senior Software Engineer",
     "brief": "A brief description of yourself as a candidate that appears in some résumé themes. You may use **Markdown** and/or <strong>HTML</strong> formatting here including [links](https://en.wikipedia.org/wiki/Special:Random) or stick to plain text.",
     "image": ""
   },
   "contact": {
-    "website": "http://your-website.com",
     "phone": "1-999-999-9999",
-    "email": "your-email@your-website.com",
+    "email": "chris[at]nellis.io",
     "other": []
   },
   "location": {
-    "address": "123 Somewhere Lane",
-    "city": "Castle Rock",
-    "region": "State, province, or region",
-    "code": "90210",
-    "country": "US"
+    "city": "Charlotte",
+    "region": "NC"
   },
   "social": [
     {
       "label": "",
       "network": "GitHub",
-      "user": "your-github-username",
-      "url": "https://github.com/your-github-username"
+      "user": "chrisnellis",
+      "url": "https://github.com/chrisnellis"
     }
   ],
   "employment": {
-    "summary": "Optional overall employment summary. Not used in most themes.",
     "history": [
       {
         "employer": "Most Recent Employer",
