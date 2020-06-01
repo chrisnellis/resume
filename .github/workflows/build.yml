@@ -8,31 +8,29 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-#    Check to make sure the commit doesn't contain "ci-skip"
+    #    Check to make sure the commit doesn't contain "ci-skip"
     if: "!contains(github.event.head_commit.message, 'ci-skip')"
 
-    strategy:
-      matrix:
-        node-version: [14.x]
+      node-version: [14.x]
 
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v2
+      - name: Checkout Repo
+        uses: actions/checkout@v2
 
-    - name: Initialize NodeJS
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Initialize NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ node-version }}
 
-    - name: Build index.html
-      run: .github/scripts/build.sh
+      - name: Build index.html
+        run: .github/scripts/build.sh
 
-    - name: Commit & Push Changes
-      run: |
-        if [[ `git status --porcelain` ]]; then
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git add index.html
-            git commit -am "[ci-skip] Push changes"
-            git push
-        fi
+      - name: Commit & Push Changes
+        run: |
+          if [[ `git status --porcelain` ]]; then
+              git config --local user.email "action@github.com"
+              git config --local user.name "GitHub Action"
+              git add index.html
+              git commit -am "[ci-skip] Push changes"
+              git push
+          fi
