@@ -173,6 +173,7 @@ h4 span:first-child {
 		display: none;
 	}
 }
+
 /* Use a separate color scheme for dark mode users */
 @media (prefers-color-scheme: dark) {
 }

@@ -1,0 +1,1 @@
+These files are based on the [json resume Flat theme](https://www.npmjs.com/package/jsonresume-theme-flat). These files are modified copies the template and the CSS from that theme.
