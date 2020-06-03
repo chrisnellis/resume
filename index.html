@@ -5,358 +5,649 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
         <title>Christopher Nellis</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-        <style type="text/css">
-            @import url(
-            	https://fonts.googleapis.com/css?family=Lato:400,700
-            );
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+        <style>
+            /* Utils */
+            /*----- Colors -----*/
+            /*----- Fonts -----*/
+            /*----- Dimensions and sizes -----*/
+            /* Base */
+            @font-face {
+                font-family: 'Josefin Sans';
+                font-style: normal;
+                font-weight: 300;
+                src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
+            }
+            @font-face {
+                font-family: 'Josefin Sans';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
+            }
+            @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 300;
+                src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+            }
+            @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+            }
+            @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+            }
+            @font-face {
+                font-family: 'Lato';
+                font-style: italic;
+                font-weight: 300;
+                src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+            }
+            @font-face {
+                font-family: 'Lato';
+                font-style: italic;
+                font-weight: 400;
+                src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+            }
+            @font-face {
+                font-family: 'Lato';
+                font-style: italic;
+                font-weight: 700;
+                src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+            }
+            
             body {
-            	background: #fff;
-            	font-family: Lato, sans-serif;
-            	margin: 0 0 80px;
+                font-family: "Lato", Helvetica, Arial, sans-serif;
+                font-weight: 400;
+                background: #393e46;
+                /* background: #f8f8f8; */
+                /* margin: 50px 0 100px; */
+                margin: 0;
+                letter-spacing: .3px;
+                color: #39424B;
             }
-            a {
-            	color: #2ecc71;
+            
+            h1, h2, h3, h4, h5, h6 {
+                text-transform: uppercase;
+                margin: 0;
             }
-            a:focus,
-            a:hover {
-            	color: #4689f4;
-            	text-decoration: none;
+            
+            h1 {
+                font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+                font-weight: 700;
+                font-size: 40px;
+                letter-spacing: 1px; }
+            
+            h2 {
+                font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                letter-spacing: .5px; }
+            
+            h3 {
+                font-family: "Lato", Helvetica, Arial, sans-serif;
+                font-weight: 300;
+                font-size: 14px;
+                letter-spacing: .4px;
+                padding-top: 4px;
+                padding-left: 2px;
+                padding-right: 2px;
             }
-            p {
-            	line-height: 1.5;
-            	margin: 0;
-            }
-            p + p {
-            	margin-top: 10px;
-            }
-            h1,
-            h2,
-            h3,
+            
+            h3.bold {
+                font-weight: 700; }
+            
             h4 {
-            	margin-top: 0
+                font-family: "Lato", Helvetica, Arial, sans-serif;
+                font-weight: 300;
+                font-size: 12px;
             }
-            section {
-            	margin-top: 30px;
+            
+            h4.bold {
+                font-weight: 700; }
+            
+            h5 {
+                font-family: "Lato", Helvetica, Arial, sans-serif;
+                font-weight: 300;
+                font-size: 11px; }
+            h5.italic {
+                font-style: italic; }
+            
+            h6 {
+                font-family: "Lato", Helvetica, Arial, sans-serif;
+                font-weight: 400;
+                font-size: 11px; }
+            
+            a {
+                color: inherit;
+                text-decoration: inherit;
             }
-            li {
-            	line-height: 1.8;
-            	list-style: none;
+            
+            a:hover, a:hover > i.fa-external-link, .info-tag-container a:hover .fa.fa-external-link {
+                color: #2895F1;
             }
-            li:before {
-            	content: "\f052";
-            	float: left;
-            	font: 13px Octicons;
-            	margin-top: 6px;
-            	margin-left: -20px;
-            	opacity: .1;
-            	position: absolute;
+            
+            a .fa-external-link {
+                font-size: 8px;
+                margin-left: 2px;
+                vertical-align: text-top;
+                color: #999;
             }
+            
+            p, li {
+                font-size: 13px;
+                font-weight: 200;
+                letter-spacing: .4px;
+            }
+            
             blockquote {
-            	border-left: 5px solid #e7e9ec;
-            	font-size: 14px;
-            }
+                font-size: 11px;
+                font-family: "Lato", Helvetica, Arial, sans-serif;
+                font-weight: 400;
+                font-style: italic;
+                margin: 10px 25px; }
+            
             em {
-            	color: #95a5a6;
-            	font-weight: normal;
-            	font-style: normal;
+                color: #999;
             }
-            h4 span:first-child {
-            	color: #000;
-            	font-weight: bold;
+            
+            ul {
+                margin: 10px 0 0;
+                -webkit-padding-start: 25px;
             }
+            
+            ul li {
+                padding-left: 10px;
+            }
+            
+            ul.minimal {
+                list-style: none;
+                padding: 0;
+            }
+            
+            ul.minimal li {
+                margin-bottom: 3px;
+                padding-left: 0;
+            }
+            
+            ul.two-column {
+                -webkit-column-count: 2;
+                -webkit-column-gap: 28px;
+                -moz-column-count: 2;
+                column-count: 2;
+                -moz-column-gap: 28px;
+                column-gap: 28px;
+            }
+            
+            ul.two-column li {
+                padding-left: 0;
+                padding-bottom: 5px;
+            }
+            
+            @page {
+                size: A4;
+            }
+            
             .container {
-            	max-width: 850px;
-            	padding: 0 30px;
-            }
-            .col-sm-6 {
-            	margin-bottom: 10px;
-            }
-            .col-sm-12 h4 {
-            	margin-top: 12px; 
-            }
-            .col-sm-12 + .col-sm-12 {
-            	margin-top: 30px;
-            }
-            #header {
-            	background: #f4f6f6;
-            	padding: 50px 0;
-            	margin-bottom: 30px;
-            	text-align: center;
-            }
-            #header h2 {
-            	color: #95a5a6;
-            	font-size: 24px;
-            }
-            #content h3 {
-            	color: #4689f4;
-            	font-size: 26px;
-            	margin-top: -4px;
-            }
-            #content aside {
-            	text-align: right;
-            	padding-right: 30px;
-            }
-            #profiles .network {
-            	text-transform: capitalize;
-            }
-            #work .position,
-            #volunteer .position {
-            	font-weight: bold;
-            	margin-bottom: 8px;
-            }
-            #education .area {
-            	font-weight: bold;
-            }
-            #education .area:before {
-            	content: "\f0d7";
-            	font: 16px Octicons;
-            	margin-right: 6px;
-            }
-            #education .studyType {
-            	margin-left: 25px;
-            }
-            #awards .summary,
-            #publications .summary {
-            	margin-top: 8px;
-            }
-            #publications .website a:before {
-            	content: attr(href);
+                padding-top: 20px;
             }
             
-            @media (min-width: 480px) {
-            	.strike-through {
-            		border-top: 1px solid #f4f6f6;
-            		height: 20px;
-            		margin-top: 12px;
-            		margin-bottom: -2px;
-            		position: relative;
-            	}
-            	.strike-through span,
-            	.strike-through a {
-            		background: #fff;
-            		position: absolute;
-            	}
-            	.strike-through span:first-child {
-            		padding-right: 20px;
-            		margin-top: -12px;
-            	}
-            	.strike-through span + span {
-            		font-size: 14px;
-            		margin-top: -10px;
-            		padding-left: 20px;
-            		right: 0;
-            	}
-            }
-            @media (max-width: 768px) {
-            	.col-sm-6:last-child {
-            		margin-bottom: 0px;
-            	}
-            	#content aside {
-            		margin-bottom: 20px;
-            		padding-right: 0;
-            		text-align: left;
-            	}
-            	#publications .website a:before {
-            		content: "View publication";
-            	}
-            }
-            @media (max-width: 480px) {
-            	h1 {
-            		font-size: 26px;
-            	}
-            	.date {
-            		font-size: 14px;
-            		margin-bottom: 5px;
-            	}
-            	.strike-through span:first-child {
-            		margin-bottom: 7px;
-            	}
-            	.strike-through span {
-            		display: block;
-            	}	
-            	#header {
-            		margin-bottom: 10px;
-            		padding: 40px 0;
-            	}
-            	#actions {
-            		display: none;
-            	}
+            .keyline {
+                width: 45px;
+                /* margin: 8px 0 10px; */
+                margin: 4px 0 10px;
+                border-top: 1px solid #FF5701;
             }
             
-            /* Used for sizing the icons */
-            .octicon {
-            	font-size: 32px;
+            .pull-left {
+                float: left;
             }
             
-            /* Use a separate color scheme for dark mode users */
-            @media (prefers-color-scheme: dark) {
+            .pull-right {
+                float: right;
+            }
+            
+            .display-block {
+                display: block;
+            }
+            
+            .display-inline {
+                display: inline;
+            }
+            
+            .clearfix:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            
+            /*
+            .profile-header {
+                width: auto;
+                max-width:  300px;
+                margin-right: 50px;
+            }
+            */
+            
+            /*
+            .profile-pic {
+                width: auto;
+                max-width: 800px;
+                margin-right: auto;
+                /* margin-top: -5px; */
+                /* margin-right: 18px; *//*
+            }
+            */
+            
+            .profile-pic img {
+                height: 150px;
+                width: 120px;
+                border-radius: 10%;
+                padding: 2px;
+                border: 2px solid #FF5701;
+                object-fit: scale-down;
+                background: white;
+                float: right;
+            }
+            
+            .summary {
+                margin: 5px 0 5px; }
+            
+            /* Layouts */
+            .page {
+                background: #222831;
+                color: #eeeeee;
+                /* width: 612px; */
+                min-height: 792px;
+                display: block;
+                margin: 0 auto;
+                border-top: 10px solid #FF5701;
+                /* padding: 36px 22px 30px 34px; */
+                padding: 50px; /* 50px calc(50px + 10%);*/
+                box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+            }
+            
+            .page:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            
+            .left-column, .profile-header {
+                float: left;
+                /* width: 160px; */
+                width: 300px;
+                /* margin-right: 20px; */
+                margin-right: 50px;
+                word-wrap: break-word;
+            }
+            
+            .right-column, .profile-pic {
+                width: auto;
+                overflow: hidden;
+                max-width: 850px;
+                /* margin-right: 50px; */
+                margin: 0 auto;
+            }
+            
+            .item {
+                /* margin-bottom: 15px; */
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 1px solid #393e46;
+            }
+            
+            .item:first-child, .title + .item {
+                margin-top: 0;
+                padding-top: 0;
+                border-top: none;
+            }
+            
+            .title {
+                background-color: #393e46;
+            }
+            
+            .title > i {
+                float: left;
+                padding-top: 4px;
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+            
+            .right-column > .container > .title {
+                margin-bottom: 15px;
+            }
+            
+            .gpa {
+                border: 1px solid white;
+                border-radius: 35%;
+                padding: 2px;
+                margin-left: 5px;
+            }
+            
+            @media only screen and (max-width: 800px) {
+                .page {
+                    padding: 35px;
+                }
+            
+                .left-column, .right-column {
+                    width: 100%;
+                    margin: 0;
+                }
+            
+                .skills-container > section > ul > li
+                /*,.languages-container > ul > li */{
+                    display: inline;
+                }
+            
+                .skills-container > section > ul > li > h6
+                /*,.languages-container > ul > li > h6 */{
+                    padding-right: 10px;
+                    display: inline;
+                }
+            
+                .info-tag-container .info-text {
+                    font-size: 14px !important;
+                }
+            
+                h3 {
+                    font-size: 16px !important;
+                }
+            
+                h4 {
+                    font-size: 14px !important;
+                }
+            
+                h6 {
+                    font-size: 12px !important;
+                }
+            
+                p, li {
+                    font-size: 14px;
+                }
+            
+                .item {
+                    margin-top: 10px;
+                    padding-top: 10px;
+                }
+            }
+            
+            @media print {
+                body {
+                    margin: 0;
+                    background: white;
+                    color: #000;
+                }
+            
+                main {
+                    background: white !important;
+                    color: black !important;
+                }
+            
+                @page {
+                    border-top: 2px solid white;
+                }
+            
+                .page {
+                    color: #000;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    padding: 35px 0 35px; /* 35px  35px; */
+                    box-shadow: none;
+                }
+            
+                .title {
+                    background-color: #393e46;
+                    color: white
+                }
+            
+                .keyline {
+                    width: 45px;
+                    /* margin: 8px 0 10px; */
+                    margin: 4px 0 10px;
+                    border-top: 2px solid #FF5701;
+                }
+            
+                .page .resume-header,
+                .page .resume-content {
+                    padding: 0 35px 0 35px;
+                }
+            
+                .container > section {
+                    page-break-inside: avoid;
+                }
+            
+                .left-column {
+                    width: 250px;
+                    margin-right: 35px;
+                }
+            
+                .left-column .container {
+                    page-break-inside: avoid;
+                }
+            
+                .fa-external-link {
+                    display: none;
+                }
+            
+                .gpa {
+                    border: 1px solid #393e46;
+                    margin-left: 10px;
+                }
+            }
+            
+            /* Components */
+            .info-tag-container {
+                margin-bottom: 5px;
+            }
+            
+            .info-tag-container .fa {
+                font-size: 14px;
+                width: 12px;
+                margin-right: 5px;
+                text-align: center;
+                vertical-align: middle;
+            }
+            
+            .info-tag-container .fa.fa-map-marker {
+                font-size: 16px;
+            }
+            
+            .info-tag-container .fa.fa-mobile {
+                font-size: 18px;
+            }
+            
+            .info-tag-container .fa.fa-envelope-o {
+                font-size: 12px;
+            }
+            
+            .info-tag-container .fa.fa-desktop {
+                font-size: 11px;
+            }
+            
+            .info-tag-container .fa.fa-external-link {
+                width: auto;
+                font-size: 8px;
+                margin-left: 2px;
+                vertical-align: text-top;
+                color: #999;
+            }
+            
+            .info-tag-container .info-text {
+                font-size: 11px;
+                display: inline-block;
+                vertical-align: middle;
+                /* width: 139px; */
+            }
+            
+            .references-container .fa {
+                font-size: 14px;
             }
         </style>
     </head>
     
     <body>
-        <header id="header">
-            <div class="container">
-                <div class="row">
-                    <div>
-                        	<h1>
-					Christopher Nellis
-				</h1>
+        <main id="resume" class="page">
+            <header class="resume-header clearfix">
+                <div class="profile-header">
+                     <h1 class="display-block">Christopher Nellis</h1>
 
-                        	<h2>
-					Software Engineer
-				</h2>
+                     <h2 class="display-block">Software Engineer</h2>
 
-                    </div>
                 </div>
-            </div>
-        </header>
-        <div id="content" class="container">
-            <section id="about" class="row">
-                <aside class="col-sm-3">
-                    	<h3>About</h3>
+            </header>
+            <div class="resume-content">
+                <aside class="left-column">
+                    <div class="container about-container">
+                        <div class="title">
+                             <h3>About</h3>
 
-                </aside>
-                <div class="col-sm-9">
-                    <p>I love solving problems with well-architected and well-tested software.
-                        I&#x27;m a firm believer in test driven development as well as paired programming.</p>
-                </div>
-            </section>
-            <section id="contact" class="row">
-                <aside class="col-sm-3">
-                    	<h3>Contact</h3>
+                            <div class="keyline"></div>
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-envelope"></i>
 
-                </aside>
-                <div class="col-sm-9">
-                    <div class="row">
-                        <div class="col-sm-6">	<strong>Email</strong>
+                             <h6 class="info-text">chris[at]nellis.io</h6>
 
-                            <div class="email">chris[at]nellis.io</div>
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-github"></i>
+
+                             <h6 class="info-text">
+					                                     <a href="https://github.com/chrisnellis" target="_blank">
+					                                         chrisnellis <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+
                         </div>
                     </div>
-                </div>
-            </section>
-            <section id="profiles" class="row">
-                <aside class="col-sm-3">
-                    	<h3>Profiles</h3>
-
                 </aside>
-                <div class="col-sm-9">
-                    <div class="row">
-                        <div class="col-sm-6">	<strong class="network">
-						GitHub
-					</strong>
+                <div class="right-column">
+                    <div class="container summary-container">
+                        <div class="title"> <i class="fa fas fa-file-alt"></i>
 
-                            <div class="username">
-                                <div class="url">	<a href="https://github.com/chrisnellis">chrisnellis</a>
+                             <h3>Summary</h3>
 
-                                </div>
-                            </div>
+                            <div class="keyline"></div>
                         </div>
+                        <p class="summary">I love solving problems with well-architected and well-tested software.
+                            I&#39;m a firm believer in test driven development as well as paired programming.
+                            I prefer the back end of the stack, and feel most comfortable Springing
+                            into action writing microservices. I also enjoy automating mundane processes,
+                            like <a href="https://github.com/chrisnellis/resume">this very document!</a>
+
+                        </p>
                     </div>
-                </div>
-            </section>
-            <section id="work" class="row">
-                <aside class="col-sm-3">
-                    	<h3>Work</h3>
+                    <div class="container work-container">
+                        <div class="title"> <i class="fa fas fa-user-tie"></i>
 
-                </aside>
-                <div class="col-sm-9">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            	<h4 class="strike-through">
-						<span>Duke Energy</span>
-						<span class="date">
-						February 2017 — Present
-					</span>
-					</h4>
+                             <h3>Experience</h3>
 
-                            <div class="website pull-right">	<a href="https://duke-energy.com">https://duke-energy.com</a>
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        <a href="https://duke-energy.com" target="_blank">
+					                            Duke Energy <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+
+                                 <h5 class="italic pull-right">
+					                            <span class="startDate">02/2017</span>
+					                            <span class="endDate"> - Invalid date</span>
+					                </h5>
 
                             </div>
-                            <div class="position">Senior Software Engineer</div>
-                            <div class="summary">
-                                <p>As a software engineer, I was responsible for</p>
-                            </div>
-                            	<h4>Highlights</h4>
+                             <h4>Senior Software Engineer</h4>
 
-                            <ul class="highlights">
-                                <li class="bullet">Increased profits on left-handed spin widgets by 35%.</li>
-                                <li class="bullet">Participated in iterative/incremental devolution.</li>
-                                <li class="bullet">Promoted to Head Ninja after 500 successful cage matches.</li>
+                            <p class="summary">I&#39;m responsible for for the back end of our Customer Mobile App</p>
+                            <ul>
+                                <li>Increased profits on left-handed spin widgets by 35%.</li>
+                                <li>Participated in iterative/incremental devolution.</li>
+                                <li>Promoted to Head Ninja after 500 successful cage matches.</li>
                             </ul>
-                        </div>
-                        <div class="col-sm-12">
-                            	<h4 class="strike-through">
-						<span>Revature</span>
-						<span class="date">
-						August 2016 — February 2017
-					</span>
-					</h4>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        <a href="https://revature.com" target="_blank">
+					                            Revature <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
 
-                            <div class="website pull-right">	<a href="https://revature.com">https://revature.com</a>
+                                 <h5 class="italic pull-right">
+					                            <span class="startDate">08/2016</span>
+					                            <span class="endDate"> - 02/2017</span>
+					                </h5>
 
                             </div>
-                            <div class="position">Software Developer</div>
-                            <div class="summary">
-                                <p>A summary of your previous role. Can include <strong>Markdown</strong> and
-                                    inline &lt;strong&gt;HTML&lt;/strong&gt; formatting.</p>
-                            </div>
-                            	<h4>Highlights</h4>
+                             <h4>Software Developer</h4>
 
-                            <ul class="highlights">
-                                <li class="bullet">Highlight #1.</li>
-                                <li class="bullet">Highlight #2.</li>
-                                <li class="bullet">Highlight #3.</li>
+                            <p class="summary">A summary of your previous role. Can include <strong>Markdown</strong> and
+                                inline <strong>HTML</strong> formatting.</p>
+                            <ul>
+                                <li>Highlight #1.</li>
+                                <li>Highlight #2.</li>
+                                <li>Highlight #3.</li>
                             </ul>
-                        </div>
-                        <div class="col-sm-12">
-                            	<h4 class="strike-through">
-						<span>UNC Office of Institutional Research and Assessment</span>
-						<span class="date">
-						May 2015 — August 2016
-					</span>
-					</h4>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        <a href="https://oira.unc.edu" target="_blank">
+					                            UNC Office of Institutional Research and Assessment <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
 
-                            <div class="website pull-right">	<a href="https://oira.unc.edu">https://oira.unc.edu</a>
+                                 <h5 class="italic pull-right">
+					                            <span class="startDate">05/2015</span>
+					                            <span class="endDate"> - 08/2016</span>
+					                </h5>
 
                             </div>
-                            <div class="position">Software Developer</div>
-                            <div class="summary">
-                                <p>A summary of your previous role. Can include <strong>Markdown</strong> and
-                                    inline &lt;strong&gt;HTML&lt;/strong&gt; formatting.</p>
-                            </div>
-                            	<h4>Highlights</h4>
+                             <h4>Software Developer</h4>
 
-                            <ul class="highlights">
-                                <li class="bullet">Highlight #1.</li>
-                                <li class="bullet">Highlight #2.</li>
-                                <li class="bullet">Highlight #3.</li>
+                            <p class="summary">A summary of your previous role. Can include <strong>Markdown</strong> and
+                                inline <strong>HTML</strong> formatting.</p>
+                            <ul>
+                                <li>Highlight #1.</li>
+                                <li>Highlight #2.</li>
+                                <li>Highlight #3.</li>
                             </ul>
-                        </div>
+                        </section>
                     </div>
-                </div>
-            </section>
-            <section id="education" class="row">
-                <aside class="col-sm-3">
-                    	<h3>Education</h3>
+                    <div class="container education-container">
+                        <div class="title"> <i class="fa fas fa-user-graduate"></i>
 
-                </aside>
-                <div class="col-sm-9">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            	<h4 class="strike-through">
-						<span>Acme University</span>
-						<span class="date">
-						2004-09 — 2009-06
-					</span>
-					</h4>
+                             <h3>Education</h3>
 
-                            	<h4>Courses</h4>
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        Acme University
+					                </h3>
 
-                            <ul class="courses">
+                                 <h5 class="italic pull-right">
+					                            <span class="startDate">09/2004</span>
+					                            <span class="endDate"> - 06/2009</span>
+					                </h5>
+
+                            </div>
+                             <h4 class="display-inline"></h4>
+
+                             <h5 class="display-inline gpa">GPA 3.5</h5>
+
+                            <ul class="two-column">
                                 <li>Data Algorithms</li>
                                 <li>Optimization</li>
                                 <li>Neural Networks</li>
@@ -366,13 +657,11 @@
                                 <li>HTTP</li>
                                 <li>TCP/IP</li>
                             </ul>
-                        </div>
+                        </section>
                     </div>
                 </div>
-            </section>
-            <!-- PDF not supported just yet-->
-            <!-- <h3><span class="octicon octicon-alert"></span> PDF copy can be found here</h3>-->
-        </div>
+            </div>
+        </main>
     </body>
 
 </html>
