@@ -5,8 +5,8 @@
     "version": "0.1.0"
   },
   "info": {
-    "label": "Senior Software Engineer",
-    "brief": "A brief description of yourself as a candidate that appears in some résumé themes. You may use **Markdown** and/or <strong>HTML</strong> formatting here including [links](https://en.wikipedia.org/wiki/Special:Random) or stick to plain text.",
+    "label": "Software Engineer",
+    "brief": "I love solving problems with well-architected and well-tested software. I'm a firm believer in test driven development as well as paired programming. ",
     "image": ""
   },
   "contact": {
@@ -29,10 +29,11 @@
     "history": [
       {
         "employer": "Duke Energy",
-        "url": "http://duke-energy.com",
+        "url": "https://duke-energy.com",
         "position": "Senior Software Engineer",
-        "summary": "A summary of your role in this position. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-        "start": "Feburary 2017",
+        "summary": "As a software engineer, I was responsible for ",
+        "start": "February 2017",
+        "end": "Present",
         "keywords": [
           "spin widgets",
           "CRM",
@@ -47,12 +48,31 @@
         ]
       },
       {
-        "employer": "Previous Employer",
-        "url": "http://employer-website.com",
-        "position": "Worker Bee",
+        "employer": "Revature",
+        "url": "https://revature.com",
+        "position": "Software Developer",
         "summary": "A summary of your previous role. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-        "start": "2009-07",
-        "end": "2013-10",
+        "start": "August 2016",
+        "end": "February 2017",
+        "keywords": [
+          "keyword1",
+          "KW2",
+          "KW2++",
+          "YAKW"
+        ],
+        "highlights": [
+          "Highlight #1.",
+          "Highlight #2.",
+          "Highlight #3."
+        ]
+      },
+      {
+        "employer": "UNC Office of Institutional Research and Assessment",
+        "url": "https://oira.unc.edu",
+        "position": "Software Developer",
+        "summary": "A summary of your previous role. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
+        "start": "May 2015",
+        "end": "August 2016",
         "keywords": [
           "keyword1",
           "KW2",

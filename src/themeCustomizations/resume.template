@@ -20,7 +20,7 @@
 <header id="header">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-9 col-sm-push-3">
+			<div>
 				{{#resume.basics}}
 				{{#name}}
 				<h1>
@@ -430,6 +430,9 @@
 		</div>
 	</section>
 	{{/if}}
+
+<!--	PDF not supported just yet-->
+<!--	<h3><span class="octicon octicon-alert"></span> PDF copy can be found here</h3>-->
 
 </div>
 
