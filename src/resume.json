@@ -6,11 +6,10 @@
   },
   "info": {
     "label": "Software Engineer",
-    "brief": "I love solving problems with well-architected and well-tested software. I'm a firm believer in test driven development as well as paired programming. I prefer the back end of the stack, and feel most comfortable Springing into action writing microservices. I also enjoy automating mundane processes, like [this very document!](https://github.com/chrisnellis/resume)"
+    "brief": "I love solving problems with well-architected and well-tested software. I'm a firm believer in test driven development as well as paired programming. I prefer the back end of the stack, and feel most comfortable Springing into action writing microservices. I also enjoy automating mundane processes, like the creation of [this very document](https://github.com/chrisnellis/resume)!"
   },
   "contact": {
-    "email": "chris[at]nellis.io",
-    "other": []
+    "email": "chris[at]nellis.io"
   },
   "location": {
     "city": "Charlotte",
@@ -18,7 +17,6 @@
   },
   "social": [
     {
-      "label": "",
       "network": "GitHub",
       "user": "chrisnellis",
       "url": "https://github.com/chrisnellis"
@@ -28,21 +26,13 @@
     "history": [
       {
         "employer": "Duke Energy",
-        "url": "https://duke-energy.com",
+        "url": "https://www.duke-energy.com",
         "position": "Senior Software Engineer",
-        "summary": "I'm responsible for for the back end of our Customer Mobile App",
+        "summary": "I'm responsible for for the back end of our Customer Mobile App, mentoring fellow software engineers, and ",
         "start": "February 2017",
-        "end": "Present",
-        "keywords": [
-          "spin widgets",
-          "CRM",
-          "PM",
-          "Ninjitsu",
-          "Six Sigma"
-        ],
         "highlights": [
           "Increased profits on left-handed spin widgets by 35%.",
-          "Participated in iterative/incremental devolution.",
+          "Engineered ",
           "Promoted to Head Ninja after 500 successful cage matches."
         ]
       },
@@ -53,12 +43,6 @@
         "summary": "A summary of your previous role. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
         "start": "August 2016",
         "end": "February 2017",
-        "keywords": [
-          "keyword1",
-          "KW2",
-          "KW2++",
-          "YAKW"
-        ],
         "highlights": [
           "Highlight #1.",
           "Highlight #2.",
@@ -72,12 +56,6 @@
         "summary": "A summary of your previous role. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
         "start": "May 2015",
         "end": "August 2016",
-        "keywords": [
-          "keyword1",
-          "KW2",
-          "KW2++",
-          "YAKW"
-        ],
         "highlights": [
           "Highlight #1.",
           "Highlight #2.",
@@ -100,12 +78,6 @@
         "Project Highlight #1",
         "Project Highlight #2",
         "Project Highlight #3"
-      ],
-      "keywords": [
-        "Tag1",
-        "Tag2",
-        "Tag3",
-        "Tag4"
       ]
     },
     {
@@ -121,37 +93,35 @@
         "Project Highlight #1",
         "Project Highlight #2",
         "Project Highlight #3"
-      ],
-      "keywords": [
-        "C++",
-        "Unreal Engine",
-        "3D",
-        "DirectX"
       ]
     }
   ],
   "education": {
-    "summary": "Optional overall education summary. Not used in most themes.",
     "level": "degree",
     "degree": "BSCS",
     "history": [
       {
-        "institution": "Acme University",
-        "title": "BSCS",
-        "url": "http://acmeuniversity.edu",
-        "start": "2004-09",
-        "end": "2009-06",
-        "grade": "3.5",
-        "summary": "Graduate of Acme University, summer of 2009. Go [Coyotes](https://en.wikipedia.org/wiki/Coyote)!",
+        "institution": "UNC Chapel Hill",
+        "studyType": "[Bachelor of Science in Information Science](https://sils.unc.edu/)",
+        "url": "https://unc.edu",
+        "start": "August 2014",
+        "end": "May 2016",
         "curriculum": [
-          "Data Algorithms",
-          "Optimization",
-          "Neural Networks",
-          "C",
-          "C++",
-          "Java",
-          "HTTP",
-          "TCP/IP"
+          "Foundations of Information Science",
+          "Information Ethics and Privacy",
+          "Introduction to Database Concepts and Applications",
+          "Web Development",
+          "Mobile Web Development",
+          "Python Development"
+        ]
+      },
+      {
+        "institution": "Appalachian State University",
+        "studyType": "Bachelor of Science in Computer Information Systems\n(Did not obtain degree, transferred to UNC)",
+        "url": "https://appstate.edu/",
+        "start": "August 2012",
+        "end": "May 2014",
+        "curriculum": [
         ]
       }
     ]

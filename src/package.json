@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "jsonresume-theme-mocha-responsive": "^1.0.0",
-    "jsonresume-theme-onepage-ds": "0.0.1"
+    "jsonresume-theme-onepage": "0.0.3"
   },
   "devDependencies": {},
   "scripts": {
