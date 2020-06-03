@@ -1,6 +1,6 @@
-This repo generates my resume by using [HackMyResume](https://github.com/hacksalot/HackMyResume), and uses a slightly customized copy of the [jsonresume Flat theme](https://www.npmjs.com/package/jsonresume-theme-flat).
+This repo generates my resume website and PDF using [HackMyResume](https://github.com/hacksalot/HackMyResume). For my website, I use the [Mocha Responsive theme](https://www.npmjs.com/package/jsonresume-theme-mocha-responsive), and for the PDF, I use a slightly modified version of the [Onepage-ds theme](https://www.npmjs.com/package/jsonresume-theme-onepage-ds)
 
-Github's CI tracks changes and builds the resume files whenever the source document changes.
+I use Github's Workflow to update my PDF and Webpage on changes to the `resume.json` file in the `src` folder.
 
 Build status:
 
