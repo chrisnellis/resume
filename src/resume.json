@@ -103,6 +103,37 @@
   },
   "skills": {
     "sets": [
+      {
+        "name": "Back End Development",
+        "skills": [
+          "Microservice Architecture",
+          "Java",
+          "Spring Framework",
+          "JUnit",
+          "Mockito"
+        ]
+      },
+      {
+        "name": "Front End Development",
+        "skills": [
+          "HTML5",
+          "CSS",
+          "Angular",
+          "Angular Material Components",
+          "Karma",
+          "Protractor"
+        ]
+      },
+      {
+        "name": "Automation Tools",
+        "skills": [
+          "Bash scripting",
+          "Python",
+          "Concourse CI",
+          "Github Actions",
+          "Jenkins"
+        ]
+      }
     ],
     "list": []
   },
