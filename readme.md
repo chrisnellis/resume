@@ -2,6 +2,4 @@ This repo generates my resume website and PDF using [HackMyResume](https://githu
 
 I use Github's Workflow to update my PDF and Webpage on changes to the `resume.json` file in the `src` folder.
 
-Build status:
-
-![Build Resume Files](https://github.com/chrisnellis/resume/workflows/Build%20Resume%20Files/badge.svg?branch=master)
+Build status: ![Build Resume Files](https://github.com/chrisnellis/resume/workflows/Build%20Resume%20Files/badge.svg?branch=master)
