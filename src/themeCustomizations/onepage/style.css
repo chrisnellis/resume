@@ -40,6 +40,10 @@ a {
   font-size: 20px;
 }
 
+.largerFont {
+  font-size: 28px;
+}
+
 .smallFont {
   font-size: 12px;
 }
