@@ -21,8 +21,11 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Build index.html
-        run: .github/scripts/build.sh
+      - name: Build Website
+        run: .github/scripts/buildWebsite.sh
+
+      - name: Build PDF
+        run: .github/scripts/buildPDF.sh
 
       - name: Commit & Push Changes
         run: |
