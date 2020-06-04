@@ -28,12 +28,13 @@
         "employer": "Duke Energy",
         "url": "https://www.duke-energy.com",
         "position": "Senior Software Engineer",
-        "summary": "I'm responsible for for the back end of our Customer Mobile App, mentoring fellow software engineers, and ",
-        "start": "February 2017",
+        "summary": "I'm responsible for for the back end of our customer mobile app, mentoring fellow software engineers, and communicating requirements to various parties who need  different levels of detail",
+        "start": "October 2017",
         "highlights": [
-          "Increased profits on left-handed spin widgets by 35%.",
-          "Engineered ",
-          "Promoted to Head Ninja after 500 successful cage matches."
+          "Developed back end for Duke Energy's customer mobile app",
+          "Lead replatforming effort for legacy services",
+          "Pioneered API layer for customer product recommendation engine",
+          "Advocated test driven development and use of testing frameworks"
         ]
       },
       {
@@ -42,7 +43,7 @@
         "position": "Software Developer",
         "summary": "A summary of your previous role. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
         "start": "August 2016",
-        "end": "February 2017",
+        "end": "October 2017",
         "highlights": [
           "Highlight #1.",
           "Highlight #2.",
@@ -117,7 +118,6 @@
       },
       {
         "institution": "Appalachian State University",
-        "studyType": "Bachelor of Science in Computer Information Systems\n(Did not obtain degree, transferred to UNC)",
         "url": "https://appstate.edu/",
         "start": "August 2012",
         "end": "May 2014",
