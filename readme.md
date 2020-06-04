@@ -4,4 +4,4 @@ I use Github's Workflow to update my PDF and Webpage on changes to the `resume.j
 
 Build status:
 
-![Build Resume File](https://github.com/chrisnellis/resume/workflows/Build%20Resume%20File/badge.svg?branch=master)
+![Build Resume Files](https://github.com/chrisnellis/resume/workflows/Build%20Resume%20Files/badge.svg?branch=master)
