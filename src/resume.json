@@ -107,6 +107,7 @@
         "name": "Back End Development",
         "skills": [
           "Microservice Architecture",
+          "Modular Monolithic Architecture",
           "Java",
           "Spring Framework",
           "JUnit",
