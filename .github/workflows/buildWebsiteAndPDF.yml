@@ -1,7 +1,7 @@
 # This is a GitHub Workflow configuration
 # Sytnax reference: https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
-name: Build Resume File
+name: Build Resume Files
 on:
   push:
     branches: [ master ]
