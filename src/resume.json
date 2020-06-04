@@ -28,74 +28,44 @@
         "employer": "Duke Energy",
         "url": "https://www.duke-energy.com",
         "position": "Senior Software Engineer",
-        "summary": "I'm responsible for for the back end of our customer mobile app, mentoring fellow software engineers, and communicating requirements to various parties who need  different levels of detail",
+        "summary": "I'm responsible for for the back end of our customer mobile app, mentoring fellow software engineers, and communicating requirements to various parties who need different levels of detail",
         "start": "October 2017",
         "highlights": [
-          "Developed back end for Duke Energy's customer mobile app",
+          "Engineered back end for Duke Energy's customer mobile app",
           "Lead replatforming effort for legacy services",
-          "Pioneered API layer for customer product recommendation engine",
-          "Advocated test driven development and use of testing frameworks"
+          "Developed API layer for customer product recommendation engine",
+          "Advocated for test driven development and use of testing frameworks"
         ]
       },
       {
         "employer": "Revature",
         "url": "https://revature.com",
         "position": "Software Developer",
-        "summary": "A summary of your previous role. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
+        "summary": "At Revature, I learned about software development while honing in my skills through hands-on projects",
         "start": "August 2016",
         "end": "October 2017",
         "highlights": [
-          "Highlight #1.",
-          "Highlight #2.",
-          "Highlight #3."
+          "Worked on multiple projects to showcase budding development skill",
+          "Presented technical solutions"
         ]
       },
       {
         "employer": "UNC Office of Institutional Research and Assessment",
         "url": "https://oira.unc.edu",
-        "position": "Software Developer",
-        "summary": "A summary of your previous role. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
+        "position": "Student Worker",
+        "summary": "As a student worker, my role was initially to oversee and manage the digital accreditation report for UNC. Over time, I realized my proclivity to software development and found myself working on projects that exercised that skillset",
         "start": "May 2015",
         "end": "August 2016",
         "highlights": [
-          "Highlight #1.",
-          "Highlight #2.",
-          "Highlight #3."
+          "Built tool to upload accreditation evidence and track approval status",
+          "Managed HTML copy of accreditation report",
+          "Created tool to translate addresses into latitude and longitude coordinates using Google Maps API",
+          "Devised reproducible method to rename multiple files at once using Powershell"
         ]
       }
     ]
   },
   "projects": [
-    {
-      "title": "Awesome Project #1",
-      "category": "FOSS",
-      "url": "http://project-page.org",
-      "repo": "https://project-repo.com",
-      "media": [],
-      "role": "Contributor",
-      "summary": "Show off your project work with a Markdown-and-HTML friendly summary of your role on the project. Software projects, creative projects, business projects can all appear here.",
-      "description": "A description of the project, for audiences that may not be familiar with it. Like the summary section, can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "highlights": [
-        "Project Highlight #1",
-        "Project Highlight #2",
-        "Project Highlight #3"
-      ]
-    },
-    {
-      "title": "Asteroids",
-      "category": "FOSS",
-      "url": "http://asteroids-demo.org",
-      "repo": "https://asteroids-repo.com",
-      "media": [],
-      "role": "Creator",
-      "summary": "Conceived, designed, implemented, and created 3D Asteroids space shooter with Unreal Engine IV and C++.",
-      "description": "A 3D Asteroids clone with Unreal 4 and cross-platform C++.",
-      "highlights": [
-        "Project Highlight #1",
-        "Project Highlight #2",
-        "Project Highlight #3"
-      ]
-    }
   ],
   "education": {
     "level": "degree",
