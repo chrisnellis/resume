@@ -224,17 +224,17 @@
         <div class=''>
           {{#if studyType}}{{studyType}} {{/if}} {{#if area}}{{area}}{{/if}}{{#if gpa}}, GPA: {{gpa}}{{/if}}
         </div>
-<!--        {{#if courses.length}}-->
-<!--        <div id='coursesBlock'>-->
-<!--          {{#each courses}}-->
-<!--          <ul class='coursesList'>-->
-<!--            {{#each .}}-->
-<!--            <li class='course'>{{.}}</li>-->
-<!--            {{/each}}-->
-<!--          </ul>-->
-<!--          {{/each}}-->
-<!--        </div>-->
-<!--        {{/if}}-->
+        {{#if courses.length}}
+        <div id='coursesBlock'>
+          {{#each courses}}
+          <ul class='coursesList'>
+            {{#each .}}
+            <li class='course'>{{.}}</li>
+            {{/each}}
+          </ul>
+          {{/each}}
+        </div>
+        {{/if}}
       </div>
       {{#unless @last}}<div class='separator'></div>{{/unless}}
       {{/each}}
