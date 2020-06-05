@@ -6,7 +6,7 @@
   },
   "info": {
     "label": "Software Engineer",
-    "brief": "I love solving problems with well-architected and well-tested software. I'm a firm believer in test driven development as well as paired programming. I prefer the back end of the stack, and feel most comfortable Springing into action writing microservices. I also enjoy automating mundane processes, like the creation of [this very document](https://github.com/chrisnellis/resume)!"
+    "brief": "As a software engineer, I love solving problems with well-architected and well-tested software using test driven development and paired programming. I prefer the back end of the stack, and feel most comfortable Springing into action writing microservices. Automating mundane processes is a hobby of mine, like the creation of [this very document](https://github.com/chrisnellis/resume)!"
   },
   "contact": {
     "email": "chris[at]nellis.io"
@@ -28,11 +28,12 @@
         "employer": "Duke Energy",
         "url": "https://www.duke-energy.com",
         "position": "Senior Software Engineer",
-        "summary": "I'm responsible for for the back end of our customer mobile app, mentoring fellow software engineers, and communicating requirements to various parties who need different levels of detail",
+        "summary": "I'm responsible for for the back end of our customer mobile app, mentoring fellow software engineers, and synthesizing both business and technical requirements",
         "start": "October 2017",
         "highlights": [
-          "Engineered back end for Duke Energy's customer mobile app",
-          "Led replatforming effort for legacy services",
+          "Currently lead back end development for Duke Energy's customer mobile app",
+          "Scaled customer mobile app's back end to support more than 1,000,000 customers",
+          "Pioneered replatforming effort to rewrite monolithic legacy services as Spring Boot microservices",
           "Developed API layer for customer product recommendation engine",
           "Advocated for test driven development and use of testing frameworks"
         ]
@@ -53,7 +54,7 @@
         "employer": "UNC Office of Institutional Research and Assessment",
         "url": "https://oira.unc.edu",
         "position": "Student Worker",
-        "summary": "As a student worker, my role was initially to oversee and manage the digital accreditation report for UNC. Over time, I realized my proclivity to software development and found myself working on projects that exercised that skillset",
+        "summary": "As a student worker, my role was initially to oversee and manage the digital accreditation report for UNC. Over time, I realized my proclivity for software development and found myself working on various software projects",
         "start": "May 2015",
         "end": "August 2016",
         "highlights": [
@@ -133,6 +134,16 @@
           "Concourse CI",
           "Github Actions",
           "Jenkins"
+        ]
+      },
+      {
+        "name": "Software Development Methodologies and Techniques",
+        "skills": [
+          "Test Driven Development",
+          "Paired Programming",
+          "Scrum",
+          "Devops",
+          "CI/CD"
         ]
       }
     ],
