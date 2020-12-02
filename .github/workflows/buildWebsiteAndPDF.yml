@@ -1,5 +1,5 @@
 # This is a GitHub Workflow configuration
-# Sytnax reference: https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions
+# Syntax reference: https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
 name: Build Resume Files
 on:
