@@ -1,9 +1,59 @@
-<!DOCTYPE html>
+/*!
+ * Custom Resume Theme
+ * Based on: jsonresume-theme-claude (https://github.com/skoenig/jsonresume-theme-claude)
+ * Original Author: Roland Sharp
+ * License: MIT
+ *
+ * Modifications:
+ * - Remove max width of summary
+ * - Fix job subtitle
+ * - Remove summary and use highlights for each job
+ * - Rename 'Experience' section to 'Work Experience'
+ */
+
+import markdownIt from 'markdown-it';
+
+const md = markdownIt({ html: true, breaks: true, linkify: true });
+
+function renderMarkdown(text) {
+  if (!text) return '';
+  return md.render(text);
+}
+
+function formatDate(dateStr) {
+  if (!dateStr) return 'Present';
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+}
+
+function dateRange(start, end) {
+  if (!start) return '';
+  return `${formatDate(start)} — ${formatDate(end)}`;
+}
+
+function icon(name) {
+  const icons = {
+    email: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`,
+    location: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`,
+    link: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>`,
+    github: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>`,
+  };
+  return icons[name] || '';
+}
+
+export function render(resume) {
+  const { basics = {}, work = [], education = [], skills = [], projects = [], languages = [], references = [] } = resume;
+  const { name, label, email, summary, location = {}, website, profiles = [] } = basics;
+
+  const githubProfile = profiles.find(p => p.network?.toLowerCase() === 'github');
+  const otherProfiles = profiles.filter(p => p.network?.toLowerCase() !== 'github');
+
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christopher Nellis</title>
+  <title>${name || 'Resume'}</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -338,146 +388,86 @@
 <body>
   <div class="container">
     <header class="header">
-      <h1>Christopher Nellis</h1>
-      <div class="label">Principal Software Engineer</div>
+      <h1>${name || ''}</h1>
+      ${label ? `<div class="label">${label}</div>` : ''}
       <div class="contact-row">
-        
-        <span class="contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:chris@nellis.io">chris@nellis.io</a></span>
-        
-        
-        
+        ${location.city ? `<span class="contact-item">${icon('location')}${[location.city, location.region, location.countryCode].filter(Boolean).join(', ')}</span>` : ''}
+        ${email ? `<span class="contact-item">${icon('email')}<a href="mailto:${email}">${email}</a></span>` : ''}
+        ${website ? `<span class="contact-item">${icon('link')}<a href="${website}">${website.replace(/^https?:\/\//, '')}</a></span>` : ''}
+        ${githubProfile ? `<span class="contact-item">${icon('github')}<a href="${githubProfile.url}">${githubProfile.username}</a></span>` : ''}
+        ${otherProfiles.map(p => `<span class="contact-item">${icon('link')}<a href="${p.url}">${p.network}</a></span>`).join('')}
       </div>
     </header>
 
-    
+    ${summary ? `<div class="summary">${renderMarkdown(summary)}</div>` : ''}
 
-    
+    ${work.length ? `
     <section class="section">
       <div class="section-title">Work Experience</div>
-      
+      ${work.map(job => `
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-title">Principal Software Engineer</span>
-          <span class="entry-date">Sep 2025 — Present</span>
+          <span class="entry-title">${job.position || ''}</span>
+          <span class="entry-date">${dateRange(job.startDate, job.endDate)}</span>
         </div>
-        <div class="entry-subtitle">Duke Energy</div>
-        <div class="entry-body"><ul><li><p>Founding member of Software Engineering Council, a cross-functional group focused on developing, reviewing, and enforcing software engineering standards across the enterprise</p>
-</li><li><p>Served as tech lead for the implementation of Auth0 for customer authentication across all Duke Energy customer-facing applications, collaborating with CyberSecurity, legal, and various platform teams</p>
-</li><li><p>Designed, developed, and implemented Auth0 Actions to enhance and secure customer authentication flows according to requirements</p>
-</li><li><p>Served as subject matter expert for additional Auth0 tenants across the enterprise</p>
-</li><li><p>Developed Aurora Postgres database standards across the the enterprise including credential rotation, audit logging, and upgrade procedures</p>
-</li><li><p>Implemented SSO for Apple's AppStoreConnect platform across Duke Energy</p>
-</li><li><p>Consult with CyberSecurity teams to disposition CodeQL findings, setting remediation plans or flagging false positives as necessary</p>
-</li><li><p>Partner with Akamai firewall team to configure integrations for Auth0 customer mobile app teams during incidents, evaluate proposed firewall changes, and analyze network traffic during incidents</p>
-</li></ul></div>
-      </div>
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-title">Lead Software Engineer</span>
-          <span class="entry-date">Jun 2021 — Sep 2025</span>
-        </div>
-        <div class="entry-subtitle">Duke Energy</div>
-        <div class="entry-body"><ul><li><p>Pioneered usage of ECS and Fargate at the company, becoming the first team to use those technologies</p>
-</li><li><p>Established patterns and best practices for deploying to ECR</p>
-</li><li><p>Migrated SQL Server Database to Aurora Postgres within AWS</p>
-</li><li><p>Architected system to send push notifications within AWS, integrating with Firebase Cloud Messaging</p>
-</li><li><p>Regularly communicate with product owners, non-technical stakeholders, peers, and developers to ensure a shared vision and alignment</p>
-</li></ul></div>
-      </div>
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-title">Senior Software Engineer</span>
-          <span class="entry-date">Sep 2019 — Jun 2021</span>
-        </div>
-        <div class="entry-subtitle">Duke Energy</div>
-        <div class="entry-body"><ul><li><p>Led backend development throughout SAP Billing System consolidation</p>
-</li><li><p>Mentored new backend developers on the team</p>
-</li><li><p>Advocated for test-driven development and unit testing across the backend platform</p>
-</li><li><p>Navigated the migration of runtime environments from Pivotal Cloud Foundry to Nirmata</p>
-</li></ul></div>
-      </div>
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-title">Software Engineer</span>
-          <span class="entry-date">Oct 2017 — Sep 2019</span>
-        </div>
-        <div class="entry-subtitle">Duke Energy</div>
-        <div class="entry-body"><ul><li><p>Developed initial feature set of the customer mobile app</p>
-</li><li><p>Coordinated deployment across multiple teams for initial customer mobile app release</p>
-</li><li><p>Instituted coding challenges for hiring processes</p>
-</li><li><p>Built customer recommendation engine API layer with Spring</p>
-</li></ul></div>
-      </div>
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-title">Software Developer</span>
-          <span class="entry-date">Aug 2016 — Oct 2017</span>
-        </div>
-        <div class="entry-subtitle">Revature</div>
-        <div class="entry-body"><ul><li><p>Participated on development teams for internal projects</p>
-</li><li><p>Presented technical solutions to colleges and trainers</p>
-</li></ul></div>
-      </div>
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-title">Student Worker</span>
-          <span class="entry-date">May 2015 — Aug 2016</span>
-        </div>
-        <div class="entry-subtitle">UNC Office of Institutional Research and Assessment</div>
-        <div class="entry-body"><ul><li><p>Built tool to upload accreditation evidence and track approval status</p>
-</li><li><p>Managed HTML copy of accreditation report</p>
-</li><li><p>Created tool to translate addresses into latitude and longitude coordinates using Google Maps API</p>
-</li><li><p>Wrote PowerShell script to rename multiple files at once</p>
-</li></ul></div>
-      </div>
-    </section>
+        <div class="entry-subtitle">${job.url ? `<a href="${job.url}">${job.name || ''}</a>` : job.name || ''}</div>
+        ${job.highlights ? `<div class="entry-body"><ul>${job.highlights.map(highlight => `<li>${renderMarkdown(highlight)}</li>`).join('')}</ul></div>` : ''}
+      </div>`).join('')}
+    </section>` : ''}
 
-    
+    ${skills.length ? `
     <section class="section">
       <div class="section-title">Skills</div>
       <div class="skills-grid">
-        
+        ${skills.map(group => `
         <div class="skill-group">
-          <h3>Spring Boot Development</h3>
+          <h3>${group.name || ''}</h3>
           <div class="skill-tags">
-            <span class="skill-tag">Springcloud for AWS Integrations</span><span class="skill-tag">Spring Web</span><span class="skill-tag">Spring Security</span><span class="skill-tag">Spring Data</span><span class="skill-tag">Springdoc OpenAPI</span><span class="skill-tag">Hibernate</span><span class="skill-tag">Lombok</span>
+            ${(group.keywords || []).map(k => `<span class="skill-tag">${k}</span>`).join('')}
           </div>
-        </div>
-        <div class="skill-group">
-          <h3>AWS Services</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">IAM</span><span class="skill-tag">Elastic Container Service</span><span class="skill-tag">Fargate</span><span class="skill-tag">Elastic Container Registry</span><span class="skill-tag">API Gateway</span><span class="skill-tag">Lambda</span><span class="skill-tag">Cloudwatch</span><span class="skill-tag">Elasticache</span><span class="skill-tag">Aurora</span><span class="skill-tag">DynamoDB</span><span class="skill-tag">Secrets Manager</span><span class="skill-tag">Route53</span><span class="skill-tag">Simple Queue Service</span><span class="skill-tag">Simple Storage Service</span><span class="skill-tag">Elastic Load Balancer</span><span class="skill-tag">Database Migration Service</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>Enterprise Tools</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Terraform</span><span class="skill-tag">Akamai</span><span class="skill-tag">JIRA</span><span class="skill-tag">GitHub</span><span class="skill-tag">GitHub Actions for CI/CD</span><span class="skill-tag">CodeQL</span><span class="skill-tag">Dependabot</span><span class="skill-tag">Flyway</span><span class="skill-tag">Dynatrace</span><span class="skill-tag">Hashicorp Vault</span>
-          </div>
-        </div>
+        </div>`).join('')}
       </div>
-    </section>
+    </section>` : ''}
 
-    
+    ${projects.length ? `
+    <section class="section">
+      <div class="section-title">Projects</div>
+      <div class="projects-grid">
+        ${projects.map(p => `
+        <div class="project-card">
+          <h3>${p.url ? `<a href="${p.url}">${p.name || ''}</a>` : p.name || ''}</h3>
+          ${p.description ? `<p>${p.description}</p>` : ''}
+        </div>`).join('')}
+      </div>
+    </section>` : ''}
 
-    
+    ${education.length ? `
     <section class="section">
       <div class="section-title">Education</div>
-      
+      ${education.map(edu => `
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-title">University of North Carolina - Chapel Hill</span>
-          <span class="entry-date"></span>
+          <span class="entry-title">${edu.institution || ''}</span>
+          <span class="entry-date">${dateRange(edu.startDate, edu.endDate)}</span>
         </div>
-        <div class="entry-subtitle">BS in Information Science</div>
-        
+        <div class="entry-subtitle">${[edu.studyType, edu.area].filter(Boolean).join(' of ')}</div>
+        ${edu.courses?.length ? `
         <div class="courses">
-          <span class="skill-tag">Programming in Python</span><span class="skill-tag">Relational Databases</span><span class="skill-tag">Web Development</span><span class="skill-tag">Systems Analysis and Design</span><span class="skill-tag">Text Mining</span>
-        </div>
-      </div>
-    </section>
+          ${edu.courses.map(c => `<span class="skill-tag">${c}</span>`).join('')}
+        </div>` : ''}
+      </div>`).join('')}
+    </section>` : ''}
 
-    
+    ${references.length ? `
+    <section class="section">
+      <div class="section-title">References</div>
+      ${references.map(ref => `
+      <div class="reference">
+        <blockquote>${ref.reference || ''}</blockquote>
+        <cite>— ${ref.name || ''}</cite>
+      </div>`).join('')}
+    </section>` : ''}
   </div>
 </body>
-</html>
+</html>`;
+}

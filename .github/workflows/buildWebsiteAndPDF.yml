@@ -1,10 +1,9 @@
-# This is a GitHub Workflow configuration
-# Syntax reference: https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions
-
 name: Build Resume Files
+
+# Currently unmaintained; moving to a manual trigger for now
 on:
-  push:
-    branches: [ master ]
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,12 +13,12 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v7
 
       - name: Initialize NodeJS
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v7
         with:
-          node-version: 14.x
+          node-version: 26.x
 
       - name: Build Website
         run: .github/scripts/buildWebsite.sh

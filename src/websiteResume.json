@@ -1,0 +1,186 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Christopher Nellis",
+    "label": "Principal Software Engineer",
+    "image": "",
+    "email": "chris@nellis.io",
+    "phone": "",
+    "url": "https://resume.nellis.io",
+    "summary": "",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": ""
+    },
+    "profiles": [
+    ]
+  },
+  "work": [
+    {
+      "name": "Duke Energy",
+      "position": "Principal Software Engineer",
+      "startDate": "2025-09-02",
+      "highlights": [
+        "Founding member of Software Engineering Council, a cross-functional group focused on developing, reviewing, and enforcing software engineering standards across the enterprise",
+        "Served as tech lead for the implementation of Auth0 for customer authentication across all Duke Energy customer-facing applications, collaborating with CyberSecurity, legal, and various platform teams",
+        "Designed, developed, and implemented Auth0 Actions to enhance and secure customer authentication flows according to requirements",
+        "Served as subject matter expert for additional Auth0 tenants across the enterprise",
+        "Developed Aurora Postgres database standards across the the enterprise including credential rotation, audit logging, and upgrade procedures",
+        "Implemented SSO for Apple's AppStoreConnect platform across Duke Energy",
+        "Consult with CyberSecurity teams to disposition CodeQL findings, setting remediation plans or flagging false positives as necessary",
+        "Partner with Akamai firewall team to configure integrations for Auth0 customer mobile app teams during incidents, evaluate proposed firewall changes, and analyze network traffic during incidents"
+      ]
+    },
+    {
+      "name": "Duke Energy",
+      "position": "Lead Software Engineer",
+      "startDate": "2021-06-02",
+      "endDate": "2025-09-02",
+      "highlights": [
+        "Pioneered usage of ECS and Fargate at the company, becoming the first team to use those technologies",
+        "Established patterns and best practices for deploying to ECR",
+        "Migrated SQL Server Database to Aurora Postgres within AWS",
+        "Architected system to send push notifications within AWS, integrating with Firebase Cloud Messaging",
+        "Regularly communicate with product owners, non-technical stakeholders, peers, and developers to ensure a shared vision and alignment"
+      ]
+    },
+    {
+      "name": "Duke Energy",
+      "position": "Senior Software Engineer",
+      "startDate": "2019-09-02",
+      "endDate": "2021-06-02",
+      "highlights": [
+        "Led backend development throughout SAP Billing System consolidation",
+        "Mentored new backend developers on the team",
+        "Advocated for test-driven development and unit testing across the backend platform",
+        "Navigated the migration of runtime environments from Pivotal Cloud Foundry to Nirmata"
+      ]
+    },
+    {
+      "name": "Duke Energy",
+      "position": "Software Engineer",
+      "startDate": "2017-10-02",
+      "endDate": "2019-09-02",
+      "highlights": [
+        "Developed initial feature set of the customer mobile app",
+        "Coordinated deployment across multiple teams for initial customer mobile app release",
+        "Instituted coding challenges for hiring processes",
+        "Built customer recommendation engine API layer with Spring"
+      ]
+    },
+    {
+      "name": "Revature",
+      "position": "Software Developer",
+      "startDate": "2016-08-02",
+      "endDate": "2017-10-02",
+      "highlights": [
+        "Participated on development teams for internal projects",
+        "Presented technical solutions to colleges and trainers"
+      ]
+    },
+    {
+      "name": "UNC Office of Institutional Research and Assessment",
+      "position": "Student Worker",
+      "startDate": "2015-05-02",
+      "endDate": "2016-08-02",
+      "highlights": [
+        "Built tool to upload accreditation evidence and track approval status",
+        "Managed HTML copy of accreditation report",
+        "Created tool to translate addresses into latitude and longitude coordinates using Google Maps API",
+        "Wrote PowerShell script to rename multiple files at once"
+      ]
+    }
+  ],
+  "volunteer": [
+  ],
+  "education": [
+    {
+      "institution": "University of North Carolina - Chapel Hill",
+      "url": "https://www.unc.edu/",
+      "area": "",
+      "studyType": "BS in Information Science",
+      "endDate": "2016-05-02",
+      "courses": [
+        "Programming in Python",
+        "Relational Databases",
+        "Web Development",
+        "Systems Analysis and Design",
+        "Text Mining"
+      ]
+    }
+  ],
+  "awards": [
+  ],
+  "publications": [
+  ],
+  "skills": [
+    {
+      "name": "Spring Boot Development",
+      "level": "",
+      "keywords": [
+        "Springcloud for AWS Integrations",
+        "Spring Web",
+        "Spring Security",
+        "Spring Data",
+        "Springdoc OpenAPI",
+        "Hibernate",
+        "Lombok"
+      ]
+    },
+    {
+      "name": "AWS Services",
+      "level": "",
+      "keywords": [
+        "IAM",
+        "Elastic Container Service",
+        "Fargate",
+        "Elastic Container Registry",
+        "API Gateway",
+        "Lambda",
+        "Cloudwatch",
+        "Elasticache",
+        "Aurora",
+        "DynamoDB",
+        "Secrets Manager",
+        "Route53",
+        "Simple Queue Service",
+        "Simple Storage Service",
+        "Elastic Load Balancer",
+        "Database Migration Service"
+      ]
+    },
+    {
+      "name": "Enterprise Tools",
+      "level": "",
+      "keywords": [
+        "Terraform",
+        "Akamai",
+        "JIRA",
+        "GitHub",
+        "GitHub Actions for CI/CD",
+        "CodeQL",
+        "Dependabot",
+        "Flyway",
+        "Dynatrace",
+        "Hashicorp Vault"
+      ]
+    }
+  ],
+  "languages": [
+  ],
+  "interests": [
+  ],
+  "references": [
+  ],
+  "projects": [
+  ],
+  "meta": {
+    "canonical": "https://github.com/chrisnellis/resume",
+    "version": "v1.0.0",
+    "lastModified": "2026-09-20T22:00:00Z",
+    "theme": "Custom fork of jsonresume-theme-claude by Roland Sharp"
+  }
+}

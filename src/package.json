@@ -2,15 +2,17 @@
   "name": "resume",
   "version": "1.0.0",
   "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "index.js",
-  "dependencies": {
-    "jsonresume-theme-mocha-responsive": "^1.0.0",
-    "jsonresume-theme-onepage": "0.0.3"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "jsonresume-theme-claude": "^1.0.0",
+    "jsonresume-theme-engineering": "^0.8.43",
+    "puppeteer": "^25.11.0",
+    "resume-cli": "^3.7.3"
+  }
 }

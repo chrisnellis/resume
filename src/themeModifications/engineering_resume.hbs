@@ -1,0 +1,35 @@
+<!--Custom Resume Theme-->
+<!--Based on: jsonresume-theme-engineering (https://github.com/skoenig/jsonresume-theme-engineering)-->
+<!--Original Author: Sören König-->
+<!--License: MIT-->
+
+<!--Modifications:-->
+<!--- Reordered sections-->
+
+
+<!doctype html>
+<html>
+    <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+    <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+
+    <style>
+    {{{css}}}
+    </style>
+
+    </head>
+    <body>
+
+    <div id="resume">
+        {{> basics }}
+        {{> work }}
+        {{> volunteer }}
+        {{> skills }}
+        {{> education }}
+        {{> awards }}
+    </div>
+    </body>
+</html>
