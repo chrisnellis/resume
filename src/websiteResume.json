@@ -24,14 +24,14 @@
       "position": "Principal Software Engineer",
       "startDate": "2025-09-02",
       "highlights": [
-        "Founding member of Software Engineering Council, a cross-functional group focused on developing, reviewing, and enforcing software engineering standards across the enterprise",
+        "Founding member of Software Engineering Council, a cross-functional group focused on authoring, reviewing, and enforcing software engineering standards across the enterprise",
         "Served as tech lead for the implementation of Auth0 for customer authentication across all Duke Energy customer-facing applications, collaborating with CyberSecurity, legal, and various platform teams",
         "Designed, developed, and implemented Auth0 Actions to enhance and secure customer authentication flows according to requirements",
         "Served as subject matter expert for additional Auth0 tenants across the enterprise",
         "Developed Aurora Postgres database standards across the the enterprise including credential rotation, audit logging, and upgrade procedures",
         "Implemented SSO for Apple's AppStoreConnect platform across Duke Energy",
-        "Consult with CyberSecurity teams to disposition CodeQL findings, setting remediation plans or flagging false positives as necessary",
-        "Partner with Akamai firewall team to configure integrations for Auth0 customer mobile app teams during incidents, evaluate proposed firewall changes, and analyze network traffic during incidents"
+        "Consulted with CyberSecurity teams to disposition CodeQL findings, setting remediation plans or flagging false positives as necessary",
+        "Partnered with Akamai firewall team to configure integrations for multiple teams, collaborated during during incidents, evaluated proposed firewall changes, and assisted in analyzing network traffic"
       ]
     },
     {
@@ -42,9 +42,9 @@
       "highlights": [
         "Pioneered usage of ECS and Fargate at the company, becoming the first team to use those technologies",
         "Established patterns and best practices for deploying to ECR",
-        "Migrated SQL Server Database to Aurora Postgres within AWS",
+        "Migrated the customer mobile app's on-prem SQL Server Database to Aurora Postgres",
         "Architected system to send push notifications within AWS, integrating with Firebase Cloud Messaging",
-        "Regularly communicate with product owners, non-technical stakeholders, peers, and developers to ensure a shared vision and alignment"
+        "Regularly communicated with product owners, non-technical stakeholders, peers, and developers to ensure alignment in technical requirements and overall behavior of the system"
       ]
     },
     {
