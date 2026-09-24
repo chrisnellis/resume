@@ -24,14 +24,15 @@
       "position": "Principal Software Engineer",
       "startDate": "2025-09-02",
       "highlights": [
-        "Founding member of Software Engineering Council, a cross-functional group focused on authoring, reviewing, and enforcing software engineering standards across the enterprise",
-        "Served as tech lead for the implementation of Auth0 for customer authentication across all Duke Energy customer-facing applications, collaborating with CyberSecurity, legal, and various platform teams",
+        "Provide technical guidance, architecture recommendations, and best practices for new features, technical debt remediation planning, and overall development efforts on the customer mobile app team",
+        "Collaborate with CyberSecurity teams to disposition CodeQL findings and penetration test findings, setting remediation plans, or flagging false positives as necessary",
+        "Partner with Akamai firewall team to configure integrations across multiple teams, collaborating during incidents, evaluating proposed firewall changes, and assisting in analyzing network traffic",
+        "Serve as tech lead for the implementation of Auth0 for customer authentication across all Duke Energy customer-facing applications, collaborating with CyberSecurity, legal, and various platform teams",
+        "Consult as subject matter expert for additional Auth0 tenants across the enterprise",
+        "Participate as a founding member of Software Engineering Council, a cross-functional group focused on authoring, reviewing, and enforcing software engineering standards across the enterprise",
         "Designed, developed, and implemented Auth0 Actions to enhance and secure customer authentication flows according to requirements",
-        "Served as subject matter expert for additional Auth0 tenants across the enterprise",
-        "Developed Aurora Postgres database standards across the the enterprise including credential rotation, audit logging, and upgrade procedures",
-        "Implemented SSO for Apple's AppStoreConnect platform across Duke Energy",
-        "Consulted with CyberSecurity teams to disposition CodeQL findings, setting remediation plans or flagging false positives as necessary",
-        "Partnered with Akamai firewall team to configure integrations for multiple teams, collaborated during during incidents, evaluated proposed firewall changes, and assisted in analyzing network traffic"
+        "Wrote Aurora Postgres database standards across the enterprise including credential rotation, audit logging, and upgrade procedures",
+        "Enabled and enforced SSO for Apple's AppStoreConnect platform across Duke Energy"
       ]
     },
     {
@@ -107,8 +108,7 @@
         "Programming in Python",
         "Relational Databases",
         "Web Development",
-        "Systems Analysis and Design",
-        "Text Mining"
+        "Systems Analysis and Design"
       ]
     }
   ],
